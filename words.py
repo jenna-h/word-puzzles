@@ -42,8 +42,14 @@ def roman(number):
 
   return t
 
+def scrabble_score(s):
+  t = 0
+  for c in s.lower():
+    t += SCRABBLE[c]
+  return t
+
 # with open('/Users/jennahimawan/Documents/word-puzzles/UKACD17-processed.TXT') as f:
 with open('/Users/jennahimawan/Documents/word-puzzles/twl06.txt') as f:
     words = f.read().splitlines()
-    for w in words:
+    for i, w in enumerate(words):
       pass
